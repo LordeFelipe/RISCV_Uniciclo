@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC_UNI
-Tue Jul 09 17:45:45 2019
+Wed Jul 10 15:22:14 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -10,20 +10,26 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis IP Cores Summary
-  6. Source assignments for MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_rrc1:auto_generated
-  7. Source assignments for MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_nqc1:auto_generated
-  8. Parameter Settings for User Entity Instance: MEM_INST:mem_i|altsyncram:altsyncram_component
-  9. Parameter Settings for User Entity Instance: XREGS:breg
- 10. Parameter Settings for User Entity Instance: ULA_RV:ula
- 11. Parameter Settings for User Entity Instance: MEM_DATA:mem_d|altsyncram:altsyncram_component
- 12. altsyncram Parameter Settings by Entity Instance
- 13. Port Connectivity Checks: "ULA_RV:ula"
- 14. Port Connectivity Checks: "CNTRL:contr"
- 15. Port Connectivity Checks: "XREGS:breg"
- 16. Port Connectivity Checks: "MEM_INST:mem_i"
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_rrc1:auto_generated
+ 13. Source assignments for MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_nqc1:auto_generated
+ 14. Parameter Settings for User Entity Instance: MEM_INST:mem_i|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: XREGS:breg
+ 16. Parameter Settings for User Entity Instance: ULA_RV:ula
+ 17. Parameter Settings for User Entity Instance: MEM_DATA:mem_d|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "ULA_RV:ula"
+ 20. Port Connectivity Checks: "CNTRL:contr"
+ 21. Port Connectivity Checks: "XREGS:breg"
+ 22. Port Connectivity Checks: "MEM_INST:mem_i"
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -49,20 +55,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Jul 09 17:45:45 2019          ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 10 15:22:14 2019      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; RISC_UNI                                   ;
 ; Top-level Entity Name              ; RISC_UNI                                   ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 1                                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -157,19 +163,1204 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                ;
-+--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                           ;
-+--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |RISC_UNI|MEM_DATA:mem_d ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd ;
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |RISC_UNI|MEM_INST:mem_i ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.vhd ;
-+--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; RISC_UNI.vhd                     ; yes             ; User VHDL File               ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISC_UNI.vhd           ;         ;
+; ULA_RV.vhd                       ; yes             ; User VHDL File               ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/ULA_RV.vhd             ;         ;
+; RV_PKG.vhd                       ; yes             ; User VHDL File               ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RV_PKG.vhd             ;         ;
+; XREGS.vhd                        ; yes             ; User VHDL File               ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/XREGS.vhd              ;         ;
+; GEN_IMM32.vhd                    ; yes             ; User VHDL File               ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/GEN_IMM32.vhd          ;         ;
+; MEM_INST.vhd                     ; yes             ; User Wizard-Generated File   ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/MEM_INST.vhd           ;         ;
+; MEM_DATA.vhd                     ; yes             ; User Wizard-Generated File   ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/MEM_DATA.vhd           ;         ;
+; CNTRL.vhd                        ; yes             ; User VHDL File               ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/CNTRL.vhd              ;         ;
+; CNTRL_ULA.vhd                    ; yes             ; User VHDL File               ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/CNTRL_ULA.vhd          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                          ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                              ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc                              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                            ;         ;
+; db/altsyncram_rrc1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/db/altsyncram_rrc1.tdf ;         ;
+; db/altsyncram_nqc1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/db/altsyncram_nqc1.tdf ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 1     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |RISC_UNI                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |RISC_UNI           ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                   ;
++--------+--------------+---------+--------------+--------------+--------------------------+------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                                              ;
++--------+--------------+---------+--------------+--------------+--------------------------+------------------------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |RISC_UNI|MEM_DATA:mem_d ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/MEM_DATA.vhd ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |RISC_UNI|MEM_INST:mem_i ; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/MEM_INST.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------+------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; XREGS:breg|XREGS[0][0]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][1]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][2]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][3]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][4]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][5]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][6]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][7]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][8]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][9]                   ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][10]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][11]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][12]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][13]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][14]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][15]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][16]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][17]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][18]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][19]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][20]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][21]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][22]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][23]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][24]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][25]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][26]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][27]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][28]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][29]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][30]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[0][31]                  ; Stuck at GND due to stuck port data_in ;
+; XREGS:breg|XREGS[31][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][0]                  ; Lost fanout                            ;
+; XREGS:breg|ro1[0..31]                    ; Lost fanout                            ;
+; XREGS:breg|ro2[0..31]                    ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[31][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[30][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[29][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[28][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[27][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[26][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[25][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[24][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[23][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[22][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[21][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[20][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[19][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[18][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[17][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[16][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[15][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[14][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[13][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[12][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[11][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][0]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][1]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][2]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][3]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][4]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][5]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][6]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][7]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][8]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][9]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][10]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][11]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][12]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][13]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][14]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][15]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][16]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][17]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][18]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][19]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][20]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][21]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][22]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][23]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][24]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][25]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][26]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][27]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][28]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][29]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][30]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[10][31]                 ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[9][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[8][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[7][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[6][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[5][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[4][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[3][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[2][31]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][0]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][1]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][2]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][3]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][4]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][5]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][6]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][7]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][8]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][9]                   ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][10]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][11]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][12]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][13]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][14]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][15]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][16]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][17]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][18]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][19]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][20]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][21]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][22]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][23]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][24]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][25]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][26]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][27]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][28]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][29]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][30]                  ; Lost fanout                            ;
+; XREGS:breg|XREGS[1][31]                  ; Lost fanout                            ;
+; Total Number of Removed Registers = 1088 ;                                        ;
++------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++-------------------------+---------------------------+---------------------------------------------------------------------------+
+; Register name           ; Reason for Removal        ; Registers Removed due to This Register                                    ;
++-------------------------+---------------------------+---------------------------------------------------------------------------+
+; XREGS:breg|XREGS[0][0]  ; Stuck at GND              ; XREGS:breg|ro1[31], XREGS:breg|XREGS[3][0], XREGS:breg|XREGS[2][0],       ;
+;                         ; due to stuck port data_in ; XREGS:breg|XREGS[1][0]                                                    ;
+; XREGS:breg|XREGS[0][1]  ; Stuck at GND              ; XREGS:breg|XREGS[3][1], XREGS:breg|XREGS[2][1], XREGS:breg|XREGS[1][1]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][2]  ; Stuck at GND              ; XREGS:breg|XREGS[3][2], XREGS:breg|XREGS[2][2], XREGS:breg|XREGS[1][2]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][3]  ; Stuck at GND              ; XREGS:breg|XREGS[3][3], XREGS:breg|XREGS[2][3], XREGS:breg|XREGS[1][3]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][4]  ; Stuck at GND              ; XREGS:breg|XREGS[3][4], XREGS:breg|XREGS[2][4], XREGS:breg|XREGS[1][4]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][5]  ; Stuck at GND              ; XREGS:breg|XREGS[3][5], XREGS:breg|XREGS[2][5], XREGS:breg|XREGS[1][5]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][6]  ; Stuck at GND              ; XREGS:breg|XREGS[3][6], XREGS:breg|XREGS[2][6], XREGS:breg|XREGS[1][6]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][7]  ; Stuck at GND              ; XREGS:breg|XREGS[3][7], XREGS:breg|XREGS[2][7], XREGS:breg|XREGS[1][7]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][8]  ; Stuck at GND              ; XREGS:breg|XREGS[3][8], XREGS:breg|XREGS[2][8], XREGS:breg|XREGS[1][8]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][9]  ; Stuck at GND              ; XREGS:breg|XREGS[3][9], XREGS:breg|XREGS[2][9], XREGS:breg|XREGS[1][9]    ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][10] ; Stuck at GND              ; XREGS:breg|XREGS[3][10], XREGS:breg|XREGS[2][10], XREGS:breg|XREGS[1][10] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][11] ; Stuck at GND              ; XREGS:breg|XREGS[3][11], XREGS:breg|XREGS[2][11], XREGS:breg|XREGS[1][11] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][12] ; Stuck at GND              ; XREGS:breg|XREGS[3][12], XREGS:breg|XREGS[2][12], XREGS:breg|XREGS[1][12] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][13] ; Stuck at GND              ; XREGS:breg|XREGS[3][13], XREGS:breg|XREGS[2][13], XREGS:breg|XREGS[1][13] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][14] ; Stuck at GND              ; XREGS:breg|XREGS[3][14], XREGS:breg|XREGS[2][14], XREGS:breg|XREGS[1][14] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][15] ; Stuck at GND              ; XREGS:breg|XREGS[3][15], XREGS:breg|XREGS[2][15], XREGS:breg|XREGS[1][15] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][16] ; Stuck at GND              ; XREGS:breg|XREGS[3][16], XREGS:breg|XREGS[2][16], XREGS:breg|XREGS[1][16] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][17] ; Stuck at GND              ; XREGS:breg|XREGS[3][17], XREGS:breg|XREGS[2][17], XREGS:breg|XREGS[1][17] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][18] ; Stuck at GND              ; XREGS:breg|XREGS[3][18], XREGS:breg|XREGS[2][18], XREGS:breg|XREGS[1][18] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][19] ; Stuck at GND              ; XREGS:breg|XREGS[3][19], XREGS:breg|XREGS[2][19], XREGS:breg|XREGS[1][19] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][20] ; Stuck at GND              ; XREGS:breg|XREGS[3][20], XREGS:breg|XREGS[2][20], XREGS:breg|XREGS[1][20] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][21] ; Stuck at GND              ; XREGS:breg|XREGS[3][21], XREGS:breg|XREGS[2][21], XREGS:breg|XREGS[1][21] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][22] ; Stuck at GND              ; XREGS:breg|XREGS[3][22], XREGS:breg|XREGS[2][22], XREGS:breg|XREGS[1][22] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][23] ; Stuck at GND              ; XREGS:breg|XREGS[3][23], XREGS:breg|XREGS[2][23], XREGS:breg|XREGS[1][23] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][24] ; Stuck at GND              ; XREGS:breg|XREGS[3][24], XREGS:breg|XREGS[2][24], XREGS:breg|XREGS[1][24] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][25] ; Stuck at GND              ; XREGS:breg|XREGS[3][25], XREGS:breg|XREGS[2][25], XREGS:breg|XREGS[1][25] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][26] ; Stuck at GND              ; XREGS:breg|XREGS[3][26], XREGS:breg|XREGS[2][26], XREGS:breg|XREGS[1][26] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][27] ; Stuck at GND              ; XREGS:breg|XREGS[3][27], XREGS:breg|XREGS[2][27], XREGS:breg|XREGS[1][27] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][28] ; Stuck at GND              ; XREGS:breg|XREGS[3][28], XREGS:breg|XREGS[2][28], XREGS:breg|XREGS[1][28] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][29] ; Stuck at GND              ; XREGS:breg|XREGS[3][29], XREGS:breg|XREGS[2][29], XREGS:breg|XREGS[1][29] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][30] ; Stuck at GND              ; XREGS:breg|XREGS[3][30], XREGS:breg|XREGS[2][30], XREGS:breg|XREGS[1][30] ;
+;                         ; due to stuck port data_in ;                                                                           ;
+; XREGS:breg|XREGS[0][31] ; Stuck at GND              ; XREGS:breg|XREGS[3][31], XREGS:breg|XREGS[2][31], XREGS:breg|XREGS[1][31] ;
+;                         ; due to stuck port data_in ;                                                                           ;
++-------------------------+---------------------------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -372,14 +1563,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CNTRL:contr"                                                                           ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; branch  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; memread ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CNTRL:contr"                                                                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; branch        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; unconditional ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; jalr          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; memread       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------+
@@ -417,7 +1610,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue Jul 09 17:45:42 2019
+    Info: Processing started: Wed Jul 10 15:22:12 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_UNI -c RISC_UNI
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file risc_uni.vhd
@@ -447,10 +1640,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file cntrl_u
     Info (12022): Found design unit 1: CNTRL_ULA-CNTRL_ULA_arch
     Info (12023): Found entity 1: CNTRL_ULA
 Info (12127): Elaborating entity "RISC_UNI" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at RISC_UNI.vhd(84): used implicit default value for signal "clock" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at RISC_UNI.vhd(99): used implicit default value for signal "opcode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at RISC_UNI.vhd(101): object "memRead" assigned a value but never read
-Warning (10873): Using initial value X (don't care) for net "PC[9..2]" at RISC_UNI.vhd(81)
+Warning (10541): VHDL Signal Declaration warning at RISC_UNI.vhd(7): used implicit default value for signal "out1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at RISC_UNI.vhd(87): used implicit default value for signal "clock" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at RISC_UNI.vhd(99): object "zero" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at RISC_UNI.vhd(102): used implicit default value for signal "opcode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at RISC_UNI.vhd(106): object "memRead" assigned a value but never read
+Warning (10873): Using initial value X (don't care) for net "PC" at RISC_UNI.vhd(84)
 Info (12128): Elaborating entity "MEM_INST" for hierarchy "MEM_INST:mem_i"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "MEM_INST:mem_i|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "MEM_INST:mem_i|altsyncram:altsyncram_component"
@@ -476,21 +1671,6 @@ Info (12128): Elaborating entity "GEN_IMM32" for hierarchy "GEN_IMM32:gerador_im
 Info (12128): Elaborating entity "XREGS" for hierarchy "XREGS:breg"
 Warning (10027): Verilog HDL or VHDL warning at the XREGS.vhd(22): index expression is not wide enough to address all of the elements in the array
 Info (12128): Elaborating entity "CNTRL" for hierarchy "CNTRL:contr"
-Warning (10631): VHDL Process Statement warning at CNTRL.vhd(37): inferring latch(es) for signal or variable "branchSignal", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at CNTRL.vhd(37): inferring latch(es) for signal or variable "memReadSignal", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at CNTRL.vhd(37): inferring latch(es) for signal or variable "mem2RegSignal", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at CNTRL.vhd(37): inferring latch(es) for signal or variable "memWriteSignal", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at CNTRL.vhd(37): inferring latch(es) for signal or variable "ulaSrcSignal", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at CNTRL.vhd(37): inferring latch(es) for signal or variable "ulaOpSignal", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at CNTRL.vhd(37): inferring latch(es) for signal or variable "regWriteSignal", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "regWriteSignal" at CNTRL.vhd(37)
-Info (10041): Inferred latch for "ulaOpSignal[0]" at CNTRL.vhd(37)
-Info (10041): Inferred latch for "ulaOpSignal[1]" at CNTRL.vhd(37)
-Info (10041): Inferred latch for "ulaSrcSignal" at CNTRL.vhd(37)
-Info (10041): Inferred latch for "memWriteSignal" at CNTRL.vhd(37)
-Info (10041): Inferred latch for "mem2RegSignal" at CNTRL.vhd(37)
-Info (10041): Inferred latch for "memReadSignal" at CNTRL.vhd(37)
-Info (10041): Inferred latch for "branchSignal" at CNTRL.vhd(37)
 Info (12128): Elaborating entity "ULA_RV" for hierarchy "ULA_RV:ula"
 Info (12128): Elaborating entity "CNTRL_ULA" for hierarchy "CNTRL_ULA:ula_cnt"
 Warning (10631): VHDL Process Statement warning at CNTRL_ULA.vhd(19): inferring latch(es) for signal or variable "opcodeSignal", which holds its previous value in one or more paths through the process
@@ -530,7 +1710,6 @@ Info (12133): Instantiated megafunction "MEM_DATA:mem_d|altsyncram:altsyncram_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nqc1.tdf
     Info (12023): Found entity 1: altsyncram_nqc1
 Info (12128): Elaborating entity "altsyncram_nqc1" for hierarchy "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_nqc1:auto_generated"
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA. -- setting all initial values to 0
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_nqc1:auto_generated|q_a[0]"
@@ -597,11 +1776,18 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_rrc1:auto_generated|q_a[29]"
         Warning (14320): Synthesized away node "MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_rrc1:auto_generated|q_a[30]"
         Warning (14320): Synthesized away node "MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_rrc1:auto_generated|q_a[31]"
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 81 warnings
-    Error: Peak virtual memory: 4683 megabytes
-    Error: Processing ended: Tue Jul 09 17:45:45 2019
-    Error: Elapsed time: 00:00:03
-    Error: Total CPU time (on all processors): 00:00:03
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out1" is stuck at GND
+Info (17049): 1056 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 0 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 4676 megabytes
+    Info: Processing ended: Wed Jul 10 15:22:14 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -4,6 +4,7 @@ use ieee.numeric_std.all;
 use work.RV_PKG.all;
 
 entity RISC_UNI is
+	port(out1: out std_logic);
 end RISC_UNI;
 
 architecture RISC_arch of RISC_UNI is
@@ -19,7 +20,7 @@ architecture RISC_arch of RISC_UNI is
 	--Gerador de imediatos
 	component GEN_IMM32 is
 		port( 
-			instr: in std_logic_vector(31 downto 0);
+			instr: in signed(31 downto 0);
 			imm32: out signed(31 downto 0)
 			);
 	end component;
@@ -37,8 +38,10 @@ architecture RISC_arch of RISC_UNI is
 		PORT (
 			opcode: in std_logic_vector(6 downto 0);
 			branch: out std_logic;
+			unconditional: out std_logic;
+			jalr: out std_logic;
 			memRead: out std_logic;
-			mem2Reg: out std_logic;
+			mem2Reg: out std_logic_vector(1 downto 0);
 			memWrite: out std_logic;
 			ulaSrc: out std_logic;
 			ulaOp: out std_logic_vector(1 downto 0);
@@ -98,8 +101,10 @@ architecture RISC_arch of RISC_UNI is
 	--Sinais da Controladora
 	signal opcode: std_logic_vector(6 downto 0);
 	signal branch: std_logic;
+	signal jalr: std_logic;
+	signal unconditional: std_logic;
 	signal memRead: std_logic;
-	signal mem2Reg: std_logic;
+	signal mem2Reg: std_logic_vector(1 downto 0);
 	signal memWrite: std_logic;
 	signal ulaSrc: std_logic;
 	signal ulaOp: std_logic_vector(1 downto 0);
@@ -120,7 +125,8 @@ architecture RISC_arch of RISC_UNI is
 	
 	signal pcBranch : std_logic_vector(31 downto 0);
 	signal pcNew : std_logic_vector(31 downto 0);
-	signal branchCond : std_logic;
+	signal pcJalr : std_logic_vector(31 downto 0);
+	signal branchCond : std_logic_vector(1 downto 0);
 	
 	begin
 	
@@ -147,7 +153,7 @@ architecture RISC_arch of RISC_UNI is
 	--Gerador de Imm
 	gerador_imm: GEN_IMM32
 	port map(
-			instr => instr,
+			instr => signed(instr),
 			imm32 => imm32
 	);
 			
@@ -170,6 +176,8 @@ architecture RISC_arch of RISC_UNI is
 	port map(
 		opcode => opcode,
 		branch => branch,
+		unconditional => unconditional,
+		jalr => jalr,
 		memRead => memRead,
 		mem2Reg => mem2Reg,
 		memWrite => memWrite,
@@ -218,17 +226,21 @@ architecture RISC_arch of RISC_UNI is
 	
 	--MUX memoria de dados
 	with mem2Reg select
-		dataWriteReg <= ulaOut when '0',
-							 memDataOut when '1';
-	
+		dataWriteReg <= ulaOut when "00",
+							 memDataOut when "01",
+							 std_logic_vector(imm32) when "10",
+							 pcMais4 when "11";
 	--Branch
 	pcMais4 <= std_logic_vector(signed(pc) + 4);
 	pcBranch <= std_logic_vector(signed(pc) + signed(shift_left(imm32,1)));
-	branchCond <= branch and zero;
+	pcJalr <= std_logic_vector((signed(pc) + signed(ulaOut)) and X"FFFFFFFE"); --mascara bit menos significativo 
+	branchCond <= ('0' or jalr) & (branch and (ulaOut(0) or unconditional));
 	
 	--MUX do branch
 	with branchCond select
-		pcNew <= pcMais4 when '0',
-					pcBranch when '1';
+		pcNew <= pcMais4 when "00",
+					pcBranch when "01",
+					pcJalr when "11",
+					pcMais4 when others;
 	
 end RISC_arch;

@@ -20,6 +20,8 @@ begin
 		if rising_edge(clk) then
 			if wren = '1' then 
 				XREGS(to_integer(unsigned(rd))) <= data;
+				ro1 <= data;
+				ro2 <= data;
 			elsif wren = '0' then
 				ro1 <= XREGS(to_integer(unsigned(rs1)));
 				ro2 <= XREGS(to_integer(unsigned(rs2)));
