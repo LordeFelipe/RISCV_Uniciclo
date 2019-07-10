@@ -41,6 +41,9 @@ begin
 					when "001" | "101" => -- Caso que precisa do shamt
 						imm32(4 downto 0) <= instr(24 downto 20);
 						imm32(31 downto 5) <= SHIFT_RIGHT(instr, 27)(31 downto 5);
+					when others =>
+						imm32(4 downto 0) <= instr(24 downto 20);
+						imm32(31 downto 5) <= SHIFT_RIGHT(instr, 27)(31 downto 5);
 				end case;
 			when S_type => 
 				imm32(11 downto 0) <= instr(31 downto 25) & instr(11 downto 7);

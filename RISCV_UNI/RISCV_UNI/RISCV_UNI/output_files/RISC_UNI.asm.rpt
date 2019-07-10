@@ -1,5 +1,5 @@
 Assembler report for RISC_UNI
-Wed Jul 10 15:49:40 2019
+Wed Jul 10 21:08:18 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.sof
-  6. Assembler Device Options: C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.pof
+  5. Assembler Device Options: C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.sof
+  6. Assembler Device Options: C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jul 10 15:49:40 2019 ;
+; Assembler Status      ; Successful - Wed Jul 10 21:08:18 2019 ;
 ; Revision Name         ; RISC_UNI                              ;
 ; Top-level Entity Name ; RISC_UNI                              ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                     ;
-+---------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                     ;
-+---------------------------------------------------------------------------------------------------------------+
-; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.sof ;
-; C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.pof ;
-+---------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Assembler Generated Files                                              ;
++------------------------------------------------------------------------+
+; File Name                                                              ;
++------------------------------------------------------------------------+
+; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.sof ;
+; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.pof ;
++------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.sof ;
-+----------------+------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                ;
-+----------------+------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP2C70F896C6                                                                                                           ;
-; JTAG usercode  ; 0x00605DF1                                                                                                             ;
-; Checksum       ; 0x00605DF1                                                                                                             ;
-+----------------+------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.sof ;
++----------------+---------------------------------------------------------------------------------+
+; Option         ; Setting                                                                         ;
++----------------+---------------------------------------------------------------------------------+
+; Device         ; EP2C70F896C6                                                                    ;
+; JTAG usercode  ; 0x00605E7B                                                                      ;
+; Checksum       ; 0x00605E7B                                                                      ;
++----------------+---------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.pof ;
-+--------------------+--------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                            ;
-+--------------------+--------------------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                                                             ;
-; JTAG usercode      ; 0x00000000                                                                                                         ;
-; Checksum           ; 0x188001F0                                                                                                         ;
-; Compression Ratio  ; 3                                                                                                                  ;
-+--------------------+--------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/output_files/RISC_UNI.pof ;
++--------------------+-----------------------------------------------------------------------------+
+; Option             ; Setting                                                                     ;
++--------------------+-----------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                      ;
+; JTAG usercode      ; 0x00000000                                                                  ;
+; Checksum           ; 0x187FFF84                                                                  ;
+; Compression Ratio  ; 3                                                                           ;
++--------------------+-----------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Jul 10 15:49:36 2019
+    Info: Processing started: Wed Jul 10 21:08:14 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RISC_UNI -c RISC_UNI
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4599 megabytes
-    Info: Processing ended: Wed Jul 10 15:49:40 2019
+    Info: Peak virtual memory: 4598 megabytes
+    Info: Processing ended: Wed Jul 10 21:08:18 2019
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 

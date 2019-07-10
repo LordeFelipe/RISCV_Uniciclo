@@ -1,5 +1,40 @@
 |RISC_UNI
-out1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= <GND>
+clock => MEM_INST:mem_i.clock
+clock => PC[0].CLK
+clock => PC[1].CLK
+clock => PC[2].CLK
+clock => PC[3].CLK
+clock => PC[4].CLK
+clock => PC[5].CLK
+clock => PC[6].CLK
+clock => PC[7].CLK
+clock => PC[8].CLK
+clock => PC[9].CLK
+clock => PC[10].CLK
+clock => PC[11].CLK
+clock => PC[12].CLK
+clock => PC[13].CLK
+clock => PC[14].CLK
+clock => PC[15].CLK
+clock => PC[16].CLK
+clock => PC[17].CLK
+clock => PC[18].CLK
+clock => PC[19].CLK
+clock => PC[20].CLK
+clock => PC[21].CLK
+clock => PC[22].CLK
+clock => PC[23].CLK
+clock => PC[24].CLK
+clock => PC[25].CLK
+clock => PC[26].CLK
+clock => PC[27].CLK
+clock => PC[28].CLK
+clock => PC[29].CLK
+clock => PC[30].CLK
+clock => PC[31].CLK
+clock => XREGS:breg.clk
+clock => MEM_DATA:mem_d.clock
 
 
 |RISC_UNI|MEM_INST:mem_i

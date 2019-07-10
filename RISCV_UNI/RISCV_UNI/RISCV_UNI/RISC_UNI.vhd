@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 use work.RV_PKG.all;
 
 entity RISC_UNI is
-	port(out1: out std_logic);
+	port(out1: out std_logic := '0';
+			clock: in std_logic := '0');
 end RISC_UNI;
 
 architecture RISC_arch of RISC_UNI is
@@ -84,7 +85,7 @@ architecture RISC_arch of RISC_UNI is
 	signal PC, PCmais4 : std_logic_vector(31 downto 0);
 	
 	--Clock
-	signal clock : std_logic;
+	--signal clock : std_logic;
 	
 	--Sinais do XREGS
 	signal rs1, rs2, rd : std_logic_vector(4 downto 0);
@@ -96,7 +97,7 @@ architecture RISC_arch of RISC_UNI is
 	
 	--Sinais da ULA
 	signal ulaA, ulaB, ulaOut : STD_LOGIC_VECTOR(31 DOWNTO 0);
-	signal zero : STD_LOGIC;
+	signal zero : std_logic;
 	
 	--Sinais da Controladora
 	signal opcode: std_logic_vector(6 downto 0);
@@ -189,7 +190,8 @@ architecture RISC_arch of RISC_UNI is
 	--Mux da ULA
 	with ulaSrc select
 		ulaB 	<= ro2 when '0',
-					std_logic_vector(imm32) when '1';
+					std_logic_vector(imm32) when '1',
+					ro2 when others;
 	
 	ulaA <= ro1;
 	
@@ -229,7 +231,8 @@ architecture RISC_arch of RISC_UNI is
 		dataWriteReg <= ulaOut when "00",
 							 memDataOut when "01",
 							 std_logic_vector(imm32) when "10",
-							 pcMais4 when "11";
+							 pcMais4 when "11",
+							 ulaOut when others;
 	--Branch
 	pcMais4 <= std_logic_vector(signed(pc) + 4);
 	pcBranch <= std_logic_vector(signed(pc) + signed(shift_left(imm32,1)));

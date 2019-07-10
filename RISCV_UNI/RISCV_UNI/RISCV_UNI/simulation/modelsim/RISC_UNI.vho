@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Web Edition"
 
--- DATE "07/10/2019 15:49:44"
+-- DATE "07/10/2019 21:08:22"
 
 -- 
 -- Device: Altera EP2C70F896C6 Package FBGA896
@@ -33,12 +33,14 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	RISC_UNI IS
     PORT (
-	out1 : OUT std_logic
+	out1 : OUT std_logic;
+	clock : IN std_logic
 	);
 END RISC_UNI;
 
 -- Design Ports Information
--- out1	=>  Location: PIN_AD26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- out1	=>  Location: PIN_W26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- clock	=>  Location: PIN_G15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF RISC_UNI IS
@@ -52,15 +54,17 @@ SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_out1 : std_logic;
+SIGNAL ww_clock : std_logic;
 
 BEGIN
 
 out1 <= ww_out1;
+ww_clock <= clock;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
--- Location: PIN_AD26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- Location: PIN_W26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 \out1~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -85,6 +89,31 @@ PORT MAP (
 	devoe => ww_devoe,
 	oe => VCC,
 	padio => ww_out1);
+
+-- Location: PIN_G15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\clock~I\ : cycloneii_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "input",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => GND,
+	padio => ww_clock);
 END structure;
 
 

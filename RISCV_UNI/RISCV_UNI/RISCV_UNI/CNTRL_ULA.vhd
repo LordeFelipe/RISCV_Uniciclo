@@ -44,6 +44,7 @@ begin
 						end if;
 					when "110" => opcodeSignal <= OR_OP;
 					when "111" => opcodeSignal <= AND_OP;
+					when others => opcodeSignal <= ADD_OP;
 				end case;
 			when "11" => -- operações com imediatos
 			case funct3 is
@@ -58,6 +59,7 @@ begin
 					end if;
 				when "110" => opcodeSignal <= OR_OP;
 				when "111" => opcodeSignal <= AND_OP;
+				when others => opcodeSignal <= ADD_OP;
 				end case;
 			when others => opcodeSignal <= ADD_OP; 
 		end case;
