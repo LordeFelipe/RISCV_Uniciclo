@@ -20,8 +20,15 @@ begin
 	begin
 		case ula_cntrl is
 			when "00" => opcodeSignal <= ADD_OP;
-			when "01" => opcodeSignal <= SUB_OP;
-			when "10" => 
+			when "01" => -- condições de branch
+				case funct3 is
+					when "000" => opcodeSignal <= SEQ_OP; 
+					when "001" => opcodeSignal <= SNE_OP;
+					when "100" => opcodeSignal <= SLT_OP;
+					when "101" => opcodeSignal <= SGE_OP;
+					when others => opcodeSignal <= SEQ_OP;
+				end case;
+			when "10" => -- operações com registradores
 				case funct3 is
 					when "000" =>
 						if(funct7 = "0000000") then opcodeSignal <= ADD_OP;
@@ -38,7 +45,7 @@ begin
 					when "110" => opcodeSignal <= OR_OP;
 					when "111" => opcodeSignal <= AND_OP;
 				end case;
-			when "11" => 
+			when "11" => -- operações com imediatos
 			case funct3 is
 				when "000" => opcodeSignal <= ADD_OP;
 				when "001" => opcodeSignal <= SLL_OP;

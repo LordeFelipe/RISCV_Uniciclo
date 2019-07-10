@@ -101,7 +101,7 @@ begin
 				mem2RegSignal <= "00";
 				memWriteSignal <= '0';
 				ulaSrcSignal <= '0';
-				ulaOpSignal <= "10";
+				ulaOpSignal <= "01";
 				regWriteSignal <= '0';
 			when "0110111" =>  --U_type
 				branchSignal <= '0';
