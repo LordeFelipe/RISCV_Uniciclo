@@ -127,7 +127,7 @@ architecture RISC_arch of RISC_UNI is
 	--Sinais do branch
 	
 	signal pcBranch : std_logic_vector(31 downto 0);
-	signal pcNew : std_logic_vector(31 downto 0);
+	signal pcNew,pcOld : std_logic_vector(31 downto 0);
 	signal pcJalr : std_logic_vector(31 downto 0);
 	signal branchCond : std_logic_vector(1 downto 0);
 	
@@ -238,6 +238,7 @@ architecture RISC_arch of RISC_UNI is
 							 pcMais4 when "11",
 							 ulaOut when others;
 	--Branch
+	pcOld <= PC;
 	pcMais4 <= std_logic_vector(signed(pc) + 4);
 	pcBranch <= std_logic_vector(signed(pc) + signed(imm32));
 	pcJalr <= std_logic_vector((signed(pc) + signed(ulaOut)) and X"FFFFFFFE"); --mascara bit menos significativo 

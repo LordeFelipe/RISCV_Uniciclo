@@ -1,2 +1,2 @@
 do wave.do
-run 400 ns
+run 520 ns

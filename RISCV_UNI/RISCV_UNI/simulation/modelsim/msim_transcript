@@ -123,10 +123,10 @@
 # 
 #           File in use by: felipe  Hostname: DESKTOP-LTL9JRD  ProcessID: 15532
 # 
-#           Attempting to use alternate WLF file "./wlftva0gb4".
+#           Attempting to use alternate WLF file "./wlfts4ism2".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftva0gb4
+#           Using alternate file: ./wlfts4ism2
 # 
 # add wave -noupdate -radix hexadecimal /risc_uni_tb/PC2
 # add wave -noupdate -radix hexadecimal /risc_uni_tb/instr2
@@ -193,7 +193,7 @@
 # configure wave -timelineunits ps
 # update
 # WaveRestoreZoom {0 ps} {233791 ps}
-# run 400 ns
+# run 520 ns
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /risc_uni_tb/i1/ula
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -208,9 +208,4 @@
 #    Time: 0 ps  Iteration: 2  Instance: /risc_uni_tb/i1/breg
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 2  Instance: /risc_uni_tb/i1/ula
-# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -4 is not in bounds of NATURAL.
-#    Time: 180 ns  Iteration: 9  Instance: /risc_uni_tb/i1/ula
-# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -4 is not in bounds of NATURAL.
-#    Time: 260 ns  Iteration: 9  Instance: /risc_uni_tb/i1/ula
-# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -4 is not in bounds of NATURAL.
-#    Time: 340 ns  Iteration: 9  Instance: /risc_uni_tb/i1/ula
+step -out -current

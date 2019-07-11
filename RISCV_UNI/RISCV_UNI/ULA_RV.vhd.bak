@@ -43,11 +43,11 @@ BEGIN
 									THEN A32 <= X"00000001"; 
 									ELSE A32 <= X"00000000"; 
 									END IF;
-			WHEN SGE_OP => 	IF(SIGNED(A) >= SIGNED(B)) 
+			WHEN SGE_OP => 	IF(SIGNED(A) > SIGNED(B)) 
 									THEN A32 <= X"00000001"; 
 									ELSE A32 <= X"00000000"; 
 									END IF;
-			WHEN SGEU_OP => 	IF(UNSIGNED(A) >= UNSIGNED(B)) 
+			WHEN SGEU_OP => 	IF(UNSIGNED(A) > UNSIGNED(B)) 
 									THEN A32 <= X"00000001";  
 									ELSE A32 <= X"00000000"; 
 									END IF;
