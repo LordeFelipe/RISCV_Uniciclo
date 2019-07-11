@@ -19,7 +19,4 @@ vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV
 
 vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  RISC_UNI_tb
 
-add wave *
-view structure
-view signals
-run 200 ns
+do C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do

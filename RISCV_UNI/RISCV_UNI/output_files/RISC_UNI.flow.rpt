@@ -1,5 +1,5 @@
 Flow report for RISC_UNI
-Wed Jul 10 21:39:01 2019
+Wed Jul 10 23:38:43 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Jul 10 21:39:01 2019      ;
+; Flow Status                        ; Successful - Wed Jul 10 23:38:43 2019      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; RISC_UNI                                   ;
 ; Top-level Entity Name              ; RISC_UNI                                   ;
 ; Family                             ; Cyclone II                                 ;
 ; Device                             ; EP2C70F896C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 31 / 68,416 ( < 1 % )                      ;
-;     Total combinational functions  ; 31 / 68,416 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 30 / 68,416 ( < 1 % )                      ;
-; Total registers                    ; 30                                         ;
+; Total logic elements               ; 2,842 / 68,416 ( 4 % )                     ;
+;     Total combinational functions  ; 2,484 / 68,416 ( 4 % )                     ;
+;     Dedicated logic registers      ; 1,087 / 68,416 ( 2 % )                     ;
+; Total registers                    ; 1087                                       ;
 ; Total pins                         ; 65 / 622 ( 10 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 8,192 / 1,152,000 ( < 1 % )                ;
+; Total memory bits                  ; 16,384 / 1,152,000 ( 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 300 ( 0 % )                            ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
@@ -64,42 +64,43 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/10/2019 21:37:56 ;
+; Start date & time ; 07/10/2019 23:37:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RISC_UNI            ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 110073160271321.156280547605256       ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; i1                                    ; --            ; --          ; RISC_UNI_tb    ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; RISC_UNI_tb                           ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; RISC_UNI_tb.vhd                       ; --            ; --          ; RISC_UNI_tb    ;
-; EDA_TEST_BENCH_MODULE_NAME           ; RISC_UNI_tb                           ; --            ; --          ; RISC_UNI_tb    ;
-; EDA_TEST_BENCH_NAME                  ; RISC_UNI_tb                           ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                ; --            ; --          ; RISC_UNI_tb    ;
-; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --          ; --             ;
-; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; MEM_INST.cmp                          ; --            ; --          ; --             ;
-; MISC_FILE                            ; MEM_DATA.cmp                          ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                              ;
++----------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                        ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++----------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                  ; 110073160271321.156281265907980       ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME               ; i1                                    ; --            ; --          ; RISC_UNI_tb    ;
+; EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ; simulation/modelsim/script.do         ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH   ; RISC_UNI_tb                           ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT                 ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                    ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS           ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                    ; RISC_UNI_tb.vhd                       ; --            ; --          ; RISC_UNI_tb    ;
+; EDA_TEST_BENCH_MODULE_NAME             ; RISC_UNI_tb                           ; --            ; --          ; RISC_UNI_tb    ;
+; EDA_TEST_BENCH_NAME                    ; RISC_UNI_tb                           ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR             ; 200 ns                                ; --            ; --          ; RISC_UNI_tb    ;
+; IP_TOOL_NAME                           ; RAM: 1-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_NAME                           ; RAM: 1-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                        ; 13.0                                  ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                        ; 13.0                                  ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                 ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                 ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                              ; MEM_INST.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                              ; MEM_DATA.cmp                          ; --            ; --          ; --             ;
+; PARTITION_COLOR                        ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL    ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE                 ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL              ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION          ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY               ; output_files                          ; --            ; --          ; --             ;
++----------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -107,12 +108,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4685 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:22     ; 1.0                     ; 4999 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4581 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4563 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4535 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:44     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4689 MB             ; 00:00:07                           ;
+; Fitter                    ; 00:00:34     ; 1.0                     ; 5024 MB             ; 00:00:33                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4585 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4611 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4566 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:53     ; --                      ; --                  ; 00:00:47                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

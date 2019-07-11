@@ -134,6 +134,7 @@ architecture RISC_arch of RISC_UNI is
 	begin
 	PC2 <= pc;
 	instr2 <= instr;
+	opcode <= instr(6 downto 0);
 	RISCV_process : process(clock)
 	begin
 		if (rising_edge(clock)) then

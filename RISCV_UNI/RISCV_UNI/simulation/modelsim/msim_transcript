@@ -113,12 +113,13 @@
 # Loading work.cntrl_ula(cntrl_ula_arch)
 # Loading work.mem_data(syn)
 # 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 200 ns
+# do C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do
+# ** Error: Cannot open macro file: C:/Users/Danilo/Documents/OAC
+# Error in macro ./RISC_UNI_run_msim_rtl_vhdl.do line 22
+# Cannot open macro file: C:/Users/Danilo/Documents/OAC
+#     while executing
+# "do C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do"
+do {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do}
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /risc_uni_tb/i1/ula
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
@@ -181,7 +182,3 @@
 #    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-do {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/wave.do}
-view -new wave
-# -new not supported on PE
-add wave -position insertpoint sim:/risc_uni_tb/i1/gerador_imm/*
