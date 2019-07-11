@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clock'
+Slack : -17.547
+TNS   : -17865.775
+
+Type  : Slow Model Setup 'MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated|ram_block1a0~porta_address_reg0'
+Slack : -2.251
+TNS   : -25.209
+
+Type  : Slow Model Hold 'MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated|ram_block1a0~porta_address_reg0'
+Slack : -6.367
+TNS   : -76.859
+
+Type  : Slow Model Hold 'clock'
+Slack : 0.527
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -2.000
+TNS   : -1705.380
+
+Type  : Slow Model Minimum Pulse Width 'MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated|ram_block1a0~porta_address_reg0'
+Slack : -1.578
+TNS   : -127.606
+
+Type  : Fast Model Setup 'clock'
+Slack : -8.202
+TNS   : -8203.089
+
+Type  : Fast Model Setup 'MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated|ram_block1a0~porta_address_reg0'
+Slack : -0.622
+TNS   : -6.446
+
+Type  : Fast Model Hold 'MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated|ram_block1a0~porta_address_reg0'
+Slack : -3.233
+TNS   : -39.386
+
+Type  : Fast Model Hold 'clock'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -2.000
+TNS   : -1705.380
+
+Type  : Fast Model Minimum Pulse Width 'MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated|ram_block1a0~porta_address_reg0'
+Slack : -0.403
+TNS   : -25.230
+
+------------------------------------------------------------
