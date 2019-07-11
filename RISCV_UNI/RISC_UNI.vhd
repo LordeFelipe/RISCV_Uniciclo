@@ -1,16 +1,15 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
+use work.RV_PKG.all;
 
-entity RISC_UNI_TB is 
-	generic (WSIZE : natural := 32);
-end RISC_UNI_TB;
+entity RISC_UNI is
+	port(pc2: out std_logic_vector(31 downto 0);
+			instr2 : out std_logic_vector(31 downto 0);
+			clock: in std_logic := '0');
+end RISC_UNI;
 
-architecture TB_arch of RISC_UNI_TB is
-
-	 constant clockFrequency : integer := 100e6; -- 100 MHz
-    constant clockPeriod    : time    := 1000 ms / clockFrequency; -- 10 ns
-
+architecture RISC_arch of RISC_UNI is
 	--Banco de registradores 
 	component XREGS is
 		generic (WSIZE : natural := 32);
@@ -55,7 +54,7 @@ architecture TB_arch of RISC_UNI_TB is
 	component MEM_INST is
 		PORT(
 			address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-			clock		: IN STD_LOGIC  := '1';
+			clock		: IN STD_LOGIC  := '0';
 			data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 			wren		: IN STD_LOGIC ;
 			q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
@@ -84,10 +83,11 @@ architecture TB_arch of RISC_UNI_TB is
 	end component;
 	
 	--PC
-	signal PC, PCmais4 : std_logic_vector(31 downto 0);
+	signal PCmais4 : std_logic_vector(31 downto 0);
+	signal PC : std_logic_vector(31 downto 0) := X"00000000";
 	
 	--Clock
-	signal clock : std_logic;
+	--signal clock : std_logic;
 	
 	--Sinais do XREGS
 	signal rs1, rs2, rd : std_logic_vector(4 downto 0);
@@ -99,7 +99,7 @@ architecture TB_arch of RISC_UNI_TB is
 	
 	--Sinais da ULA
 	signal ulaA, ulaB, ulaOut : STD_LOGIC_VECTOR(31 DOWNTO 0);
-	signal zero : STD_LOGIC;
+	signal zero : std_logic;
 	
 	--Sinais da Controladora
 	signal opcode: std_logic_vector(6 downto 0);
@@ -127,15 +127,18 @@ architecture TB_arch of RISC_UNI_TB is
 	--Sinais do branch
 	
 	signal pcBranch : std_logic_vector(31 downto 0);
-	signal pcNew : std_logic_vector(31 downto 0);
+	signal pcNew,pcOld,pcAux : std_logic_vector(31 downto 0);
 	signal pcJalr : std_logic_vector(31 downto 0);
 	signal branchCond : std_logic_vector(1 downto 0);
 	
 	begin
-	
+	PC2 <= pc;
+	instr2 <= instr;
+	opcode <= instr(6 downto 0);
 	RISCV_process : process(clock)
 	begin
-		if (rising_edge(clock)) then
+		if (falling_edge(clock)) then
+			pcAux <= PC;
 			PC <= pcNew;
 		end if;
 	end process;
@@ -148,6 +151,8 @@ architecture TB_arch of RISC_UNI_TB is
 			wren => '0',
 			q => instr
 	);
+	
+	pcold <= std_logic_vector(signed(pcaux) + 4);
 	
 	rs1 <= instr(19 downto 15);
 	rs2 <= instr(24 downto 20);
@@ -192,7 +197,8 @@ architecture TB_arch of RISC_UNI_TB is
 	--Mux da ULA
 	with ulaSrc select
 		ulaB 	<= ro2 when '0',
-					std_logic_vector(imm32) when '1';
+					std_logic_vector(imm32) when '1',
+					ro2 when others;
 	
 	ulaA <= ro1;
 	
@@ -232,10 +238,12 @@ architecture TB_arch of RISC_UNI_TB is
 		dataWriteReg <= ulaOut when "00",
 							 memDataOut when "01",
 							 std_logic_vector(imm32) when "10",
-							 pcMais4 when "11";
+							 pcold when "11",
+							 ulaOut when others;
 	--Branch
+	
 	pcMais4 <= std_logic_vector(signed(pc) + 4);
-	pcBranch <= std_logic_vector(signed(pc) + signed(shift_left(imm32,1)));
+	pcBranch <= std_logic_vector(signed(pc) + signed(imm32));
 	pcJalr <= std_logic_vector((signed(pc) + signed(ulaOut)) and X"FFFFFFFE"); --mascara bit menos significativo 
 	branchCond <= ('0' or jalr) & (branch and (ulaOut(0) or unconditional));
 	
@@ -245,14 +253,5 @@ architecture TB_arch of RISC_UNI_TB is
 					pcBranch when "01",
 					pcJalr when "11",
 					pcMais4 when others;
-
-	clk <= not clk after clockPeriod / 2;
-	process 
-	begin	
-		for I in 21 to 31 loop
-			test <= test xor '1';
-			wait for clockPeriod;
-		end loop;
 	
-	end process;
-end TB_arch; 
+end RISC_arch;
