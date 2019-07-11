@@ -1,0 +1,1831 @@
+Analysis & Synthesis report for RISC_UNI
+Wed Jul 10 20:57:45 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated
+ 15. Source assignments for MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated
+ 16. Parameter Settings for User Entity Instance: MEM_INST:mem_i|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: XREGS:breg
+ 18. Parameter Settings for User Entity Instance: ULA_RV:ula
+ 19. Parameter Settings for User Entity Instance: MEM_DATA:mem_d|altsyncram:altsyncram_component
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "ULA_RV:ula"
+ 22. Port Connectivity Checks: "CNTRL:contr"
+ 23. Port Connectivity Checks: "XREGS:breg"
+ 24. Port Connectivity Checks: "MEM_INST:mem_i"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jul 10 20:57:45 2019      ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; RISC_UNI                                   ;
+; Top-level Entity Name              ; RISC_UNI                                   ;
+; Family                             ; Cyclone II                                 ;
+; Total logic elements               ; 31                                         ;
+;     Total combinational functions  ; 31                                         ;
+;     Dedicated logic registers      ; 30                                         ;
+; Total registers                    ; 30                                         ;
+; Total pins                         ; 65                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 8,192                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                                      ; RISC_UNI           ; RISC_UNI           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------------+---------+
+; RISC_UNI.vhd                     ; yes             ; User VHDL File                   ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd            ;         ;
+; ULA_RV.vhd                       ; yes             ; User VHDL File                   ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/ULA_RV.vhd              ;         ;
+; RV_PKG.vhd                       ; yes             ; User VHDL File                   ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RV_PKG.vhd              ;         ;
+; XREGS.vhd                        ; yes             ; User VHDL File                   ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/XREGS.vhd               ;         ;
+; GEN_IMM32.vhd                    ; yes             ; User VHDL File                   ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd           ;         ;
+; MEM_DATA.mif                     ; yes             ; User Memory Initialization File  ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.mif            ;         ;
+; MEM_INST.mif                     ; yes             ; User Memory Initialization File  ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.mif            ;         ;
+; CNTRL.vhd                        ; yes             ; User VHDL File                   ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL.vhd               ;         ;
+; CNTRL_ULA.vhd                    ; yes             ; User VHDL File                   ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd           ;         ;
+; MEM_INST.vhd                     ; yes             ; User Wizard-Generated File       ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.vhd            ;         ;
+; MEM_DATA.vhd                     ; yes             ; User Wizard-Generated File       ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_n5d1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/db/altsyncram_n5d1.tdf  ;         ;
+; db/altsyncram_j4d1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/db/altsyncram_j4d1.tdf  ;         ;
++----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 31    ;
+;                                             ;       ;
+; Total combinational functions               ; 31    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 31    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2     ;
+;     -- arithmetic mode                      ; 29    ;
+;                                             ;       ;
+; Total registers                             ; 30    ;
+;     -- Dedicated logic registers            ; 30    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 65    ;
+; Total memory bits                           ; 8192  ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 62    ;
+; Total fan-out                               ; 501   ;
+; Average fan-out                             ; 3.17  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; |RISC_UNI                                 ; 31 (31)           ; 30 (30)      ; 8192        ; 0            ; 0       ; 0         ; 65   ; 0            ; |RISC_UNI                                                                               ;              ;
+;    |MEM_INST:mem_i|                       ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC_UNI|MEM_INST:mem_i                                                                ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC_UNI|MEM_INST:mem_i|altsyncram:altsyncram_component                                ;              ;
+;          |altsyncram_n5d1:auto_generated| ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC_UNI|MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                ;
++------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------+
+; Name                                                                                     ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF          ;
++------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------+
+; MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; MEM_INST.mif ;
++------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                           ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |RISC_UNI|MEM_DATA:mem_d ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |RISC_UNI|MEM_INST:mem_i ; C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++------------------------------------------+---------------------------------------------+
+; Register name                            ; Reason for Removal                          ;
++------------------------------------------+---------------------------------------------+
+; XREGS:breg|XREGS[0][0]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][1]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][2]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][3]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][4]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][5]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][6]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][7]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][8]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][9]                   ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][10]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][11]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][12]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][13]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][14]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][15]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][16]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][17]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][18]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][19]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][20]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][21]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][22]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][23]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][24]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][25]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][26]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][27]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][28]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][29]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][30]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[0][31]                  ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|XREGS[31][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[31][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[30][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[29][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[28][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[27][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[26][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[25][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[24][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[23][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[22][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[21][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[20][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[19][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[18][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[17][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[16][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[15][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[14][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[13][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[12][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[11][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][0]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][1]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][2]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][3]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][4]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][5]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][6]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][7]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][8]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][9]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][10]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][11]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][12]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][13]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][14]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][15]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][16]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][17]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][18]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][19]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][20]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][21]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][22]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][23]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][24]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][25]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][26]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][27]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][28]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][29]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][30]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[10][31]                 ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[9][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[8][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[7][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[6][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[5][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[4][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[3][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[2][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][0]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][1]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][2]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][3]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][4]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][5]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][6]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][7]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][8]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][9]                   ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][10]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][11]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][12]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][13]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][14]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][15]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][16]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][17]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][18]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][19]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][20]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][21]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][22]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][23]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][24]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][25]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][26]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][27]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][28]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][29]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][30]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|XREGS[1][31]                  ; Stuck at GND due to stuck port clock_enable ;
+; XREGS:breg|ro1[0..31]                    ; Stuck at GND due to stuck port data_in      ;
+; XREGS:breg|ro2[0..31]                    ; Stuck at GND due to stuck port data_in      ;
+; PC[0,1]                                  ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 1090 ;                                             ;
++------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                  ;
++-------------------------+---------------------------+----------------------------------------+
+; Register name           ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------------+---------------------------+----------------------------------------+
+; XREGS:breg|XREGS[0][0]  ; Stuck at GND              ; XREGS:breg|ro1[0], XREGS:breg|ro2[0]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][1]  ; Stuck at GND              ; XREGS:breg|ro1[1], XREGS:breg|ro2[1]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][2]  ; Stuck at GND              ; XREGS:breg|ro1[2], XREGS:breg|ro2[2]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][3]  ; Stuck at GND              ; XREGS:breg|ro1[3], XREGS:breg|ro2[3]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][4]  ; Stuck at GND              ; XREGS:breg|ro1[4], XREGS:breg|ro2[4]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][5]  ; Stuck at GND              ; XREGS:breg|ro1[5], XREGS:breg|ro2[5]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][6]  ; Stuck at GND              ; XREGS:breg|ro1[6], XREGS:breg|ro2[6]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][7]  ; Stuck at GND              ; XREGS:breg|ro1[7], XREGS:breg|ro2[7]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][8]  ; Stuck at GND              ; XREGS:breg|ro1[8], XREGS:breg|ro2[8]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][9]  ; Stuck at GND              ; XREGS:breg|ro1[9], XREGS:breg|ro2[9]   ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][10] ; Stuck at GND              ; XREGS:breg|ro1[10], XREGS:breg|ro2[10] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][11] ; Stuck at GND              ; XREGS:breg|ro1[11], XREGS:breg|ro2[11] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][12] ; Stuck at GND              ; XREGS:breg|ro1[12], XREGS:breg|ro2[12] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][13] ; Stuck at GND              ; XREGS:breg|ro1[13], XREGS:breg|ro2[13] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][14] ; Stuck at GND              ; XREGS:breg|ro1[14], XREGS:breg|ro2[14] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][15] ; Stuck at GND              ; XREGS:breg|ro1[15], XREGS:breg|ro2[15] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][16] ; Stuck at GND              ; XREGS:breg|ro1[16], XREGS:breg|ro2[16] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][17] ; Stuck at GND              ; XREGS:breg|ro1[17], XREGS:breg|ro2[17] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][18] ; Stuck at GND              ; XREGS:breg|ro1[18], XREGS:breg|ro2[18] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][19] ; Stuck at GND              ; XREGS:breg|ro1[19], XREGS:breg|ro2[19] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][20] ; Stuck at GND              ; XREGS:breg|ro1[20], XREGS:breg|ro2[20] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][21] ; Stuck at GND              ; XREGS:breg|ro1[21], XREGS:breg|ro2[21] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][22] ; Stuck at GND              ; XREGS:breg|ro1[22], XREGS:breg|ro2[22] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][23] ; Stuck at GND              ; XREGS:breg|ro1[23], XREGS:breg|ro2[23] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][24] ; Stuck at GND              ; XREGS:breg|ro1[24], XREGS:breg|ro2[24] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][25] ; Stuck at GND              ; XREGS:breg|ro1[25], XREGS:breg|ro2[25] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][26] ; Stuck at GND              ; XREGS:breg|ro1[26], XREGS:breg|ro2[26] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][27] ; Stuck at GND              ; XREGS:breg|ro1[27], XREGS:breg|ro2[27] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][28] ; Stuck at GND              ; XREGS:breg|ro1[28], XREGS:breg|ro2[28] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][29] ; Stuck at GND              ; XREGS:breg|ro1[29], XREGS:breg|ro2[29] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][30] ; Stuck at GND              ; XREGS:breg|ro1[30], XREGS:breg|ro2[30] ;
+;                         ; due to stuck port data_in ;                                        ;
+; XREGS:breg|XREGS[0][31] ; Stuck at GND              ; XREGS:breg|ro1[31], XREGS:breg|ro2[31] ;
+;                         ; due to stuck port data_in ;                                        ;
++-------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 30    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |RISC_UNI|PC[29]                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |RISC_UNI|CNTRL_ULA:ula_cnt|Mux20 ;
+; 9:1                ; 31 bits   ; 186 LEs       ; 62 LEs               ; 124 LEs                ; No         ; |RISC_UNI|ULA_RV:ula|Selector30   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                     ;
++---------------------------------+--------------------+------+----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                      ;
++---------------------------------+--------------------+------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                     ;
++---------------------------------+--------------------+------+----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                      ;
++---------------------------------+--------------------+------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEM_INST:mem_i|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------+
+; Parameter Name                     ; Value                ; Type                            ;
++------------------------------------+----------------------+---------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                         ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                  ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                         ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                         ;
+; WIDTH_A                            ; 32                   ; Signed Integer                  ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                  ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                         ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                         ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WIDTH_B                            ; 1                    ; Untyped                         ;
+; WIDTHAD_B                          ; 1                    ; Untyped                         ;
+; NUMWORDS_B                         ; 1                    ; Untyped                         ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                         ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                         ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                         ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                         ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                         ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                         ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                  ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                         ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                         ;
+; BYTE_SIZE                          ; 8                    ; Untyped                         ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; INIT_FILE                          ; MEM_INST.mif         ; Untyped                         ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                         ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                         ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                         ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                         ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                         ;
+; CBXI_PARAMETER                     ; altsyncram_n5d1      ; Untyped                         ;
++------------------------------------+----------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: XREGS:breg ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; wsize          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_RV:ula ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WSIZE          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEM_DATA:mem_d|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------+
+; Parameter Name                     ; Value                ; Type                            ;
++------------------------------------+----------------------+---------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                         ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                  ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                         ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                         ;
+; WIDTH_A                            ; 32                   ; Signed Integer                  ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                  ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                         ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                         ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WIDTH_B                            ; 1                    ; Untyped                         ;
+; WIDTHAD_B                          ; 1                    ; Untyped                         ;
+; NUMWORDS_B                         ; 1                    ; Untyped                         ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                         ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                         ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                         ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                         ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                         ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                         ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                  ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                         ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                         ;
+; BYTE_SIZE                          ; 8                    ; Untyped                         ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; INIT_FILE                          ; MEM_DATA.mif         ; Untyped                         ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                         ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                         ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                         ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                         ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                         ;
+; CBXI_PARAMETER                     ; altsyncram_j4d1      ; Untyped                         ;
++------------------------------------+----------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                           ;
++-------------------------------------------+------------------------------------------------+
+; Name                                      ; Value                                          ;
++-------------------------------------------+------------------------------------------------+
+; Number of entity instances                ; 2                                              ;
+; Entity Instance                           ; MEM_INST:mem_i|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                    ;
+;     -- WIDTH_A                            ; 32                                             ;
+;     -- NUMWORDS_A                         ; 256                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                   ;
+;     -- WIDTH_B                            ; 1                                              ;
+;     -- NUMWORDS_B                         ; 1                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ;
+; Entity Instance                           ; MEM_DATA:mem_d|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                    ;
+;     -- WIDTH_A                            ; 32                                             ;
+;     -- NUMWORDS_A                         ; 256                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                   ;
+;     -- WIDTH_B                            ; 1                                              ;
+;     -- NUMWORDS_B                         ; 1                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ;
++-------------------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULA_RV:ula"                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CNTRL:contr"                                                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; memread ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "XREGS:breg" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; rst  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "MEM_INST:mem_i" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; data ; Input ; Info     ; Stuck at GND     ;
+; wren ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Jul 10 20:57:41 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_UNI -c RISC_UNI
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file risc_uni.vhd
+    Info (12022): Found design unit 1: RISC_UNI-RISC_arch
+    Info (12023): Found entity 1: RISC_UNI
+Info (12021): Found 2 design units, including 1 entities, in source file ula_rv.vhd
+    Info (12022): Found design unit 1: ULA_RV-ULA_ARCH
+    Info (12023): Found entity 1: ULA_RV
+Info (12021): Found 1 design units, including 0 entities, in source file rv_pkg.vhd
+    Info (12022): Found design unit 1: RV_PKG
+Info (12021): Found 2 design units, including 1 entities, in source file xregs.vhd
+    Info (12022): Found design unit 1: XREGS-arch_XREGS
+    Info (12023): Found entity 1: XREGS
+Info (12021): Found 2 design units, including 1 entities, in source file gen_imm32.vhd
+    Info (12022): Found design unit 1: GEN_IMM32-GEN_arch
+    Info (12023): Found entity 1: GEN_IMM32
+Info (12021): Found 2 design units, including 1 entities, in source file cntrl.vhd
+    Info (12022): Found design unit 1: CNTRL-CNTRL_arch
+    Info (12023): Found entity 1: CNTRL
+Info (12021): Found 2 design units, including 1 entities, in source file cntrl_ula.vhd
+    Info (12022): Found design unit 1: CNTRL_ULA-CNTRL_ULA_arch
+    Info (12023): Found entity 1: CNTRL_ULA
+Info (12021): Found 2 design units, including 1 entities, in source file risc_uni_tb.vhd
+    Info (12022): Found design unit 1: RISC_UNI_tb-RISC_UNI_tb_arch
+    Info (12023): Found entity 1: RISC_UNI_tb
+Info (12021): Found 2 design units, including 1 entities, in source file mem_inst.vhd
+    Info (12022): Found design unit 1: mem_inst-SYN
+    Info (12023): Found entity 1: MEM_INST
+Info (12021): Found 2 design units, including 1 entities, in source file mem_data.vhd
+    Info (12022): Found design unit 1: mem_data-SYN
+    Info (12023): Found entity 1: MEM_DATA
+Info (12127): Elaborating entity "RISC_UNI" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at RISC_UNI.vhd(102): object "zero" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at RISC_UNI.vhd(105): used implicit default value for signal "opcode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at RISC_UNI.vhd(109): object "memRead" assigned a value but never read
+Info (12128): Elaborating entity "MEM_INST" for hierarchy "MEM_INST:mem_i"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "MEM_INST:mem_i|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "MEM_INST:mem_i|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "MEM_INST:mem_i|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "MEM_INST.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n5d1.tdf
+    Info (12023): Found entity 1: altsyncram_n5d1
+Info (12128): Elaborating entity "altsyncram_n5d1" for hierarchy "MEM_INST:mem_i|altsyncram:altsyncram_component|altsyncram_n5d1:auto_generated"
+Info (12128): Elaborating entity "GEN_IMM32" for hierarchy "GEN_IMM32:gerador_imm"
+Info (12128): Elaborating entity "XREGS" for hierarchy "XREGS:breg"
+Warning (10027): Verilog HDL or VHDL warning at the XREGS.vhd(22): index expression is not wide enough to address all of the elements in the array
+Info (12128): Elaborating entity "CNTRL" for hierarchy "CNTRL:contr"
+Info (12128): Elaborating entity "ULA_RV" for hierarchy "ULA_RV:ula"
+Info (12128): Elaborating entity "CNTRL_ULA" for hierarchy "CNTRL_ULA:ula_cnt"
+Warning (10631): VHDL Process Statement warning at CNTRL_ULA.vhd(19): inferring latch(es) for signal or variable "opcodeSignal", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "opcodeSignal.SNE_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SEQ_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SGEU_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SGE_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SLTU_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SLT_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SRA_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SRL_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SLL_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.XOR_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.NOR_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.OR_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.AND_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.SUB_OP" at CNTRL_ULA.vhd(19)
+Info (10041): Inferred latch for "opcodeSignal.ADD_OP" at CNTRL_ULA.vhd(19)
+Info (12128): Elaborating entity "MEM_DATA" for hierarchy "MEM_DATA:mem_d"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "MEM_DATA:mem_d|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "MEM_DATA:mem_d|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "MEM_DATA:mem_d|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "MEM_DATA.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_j4d1.tdf
+    Info (12023): Found entity 1: altsyncram_j4d1
+Info (12128): Elaborating entity "altsyncram_j4d1" for hierarchy "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated"
+Warning (14026): LATCH primitive "CNTRL_ULA:ula_cnt|opcode.SGE_OP" is permanently enabled
+Warning (14026): LATCH primitive "CNTRL_ULA:ula_cnt|opcode.SLT_OP" is permanently enabled
+Warning (14026): LATCH primitive "CNTRL_ULA:ula_cnt|opcode.SUB_OP" is permanently enabled
+Warning (14026): LATCH primitive "CNTRL_ULA:ula_cnt|opcode.ADD_OP" is permanently enabled
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[15]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[16]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[17]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[18]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[19]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[20]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[21]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[22]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[23]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[24]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[25]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[26]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[27]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[28]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[29]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[30]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[31]"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[15]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[16]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[17]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[18]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[19]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[20]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[21]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[22]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[23]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[24]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[25]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[26]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[27]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[28]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[29]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[30]"
+        Warning (14320): Synthesized away node "MEM_DATA:mem_d|altsyncram:altsyncram_component|altsyncram_j4d1:auto_generated|q_a[31]"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pc2[0]" is stuck at GND
+    Warning (13410): Pin "pc2[1]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 128 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 31 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 81 warnings
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Wed Jul 10 20:57:45 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="RISC_UNI">
-		<CBX_INST_ENTRY INSTANCE_NAME="|RISC_UNI|MEM_DATA:mem_d|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_nqc1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|RISC_UNI|MEM_INST:mem_i|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_rrc1.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

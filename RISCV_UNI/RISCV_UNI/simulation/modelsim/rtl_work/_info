@@ -1,0 +1,361 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\felip\Downloads\RISCV_UNI\RISCV_UNI\simulation\modelsim
+Ecntrl
+Z1 w1562799355
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\felip\Downloads\RISCV_UNI\RISCV_UNI\simulation\modelsim
+Z6 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL.vhd
+Z7 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL.vhd
+l0
+L5
+VIdHnO0TUoCTKDIL[M:]=C2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1562803104.658000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL.vhd|
+Z11 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 ;JFE5fINJ9;=;g31SWgK]3
+!i10b 1
+Acntrl_arch
+R2
+R3
+R4
+DEx4 work 5 cntrl 0 22 IdHnO0TUoCTKDIL[M:]=C2
+l32
+L20
+V0^^9Vlcn<0bWNg]f<24RW0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 2]XcQk>>Gk]:GEcjn9=W]0
+!i10b 1
+Ecntrl_ula
+Z14 w1562803610
+Z15 DPx4 work 6 rv_pkg 0 22 WUhF>0V5]kIm^YY69m=XL0
+R2
+R3
+R4
+R5
+Z16 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd
+Z17 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd
+l0
+L6
+VHF8nUWN>7Y3^nf=UQ0D^?3
+R8
+31
+Z18 !s108 1562803106.828000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd|
+Z20 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd|
+R12
+R13
+!s100 gTg7@[hcP9C5H8Wl^k4BE1
+!i10b 1
+Acntrl_ula_arch
+R15
+R2
+R3
+R4
+DEx4 work 9 cntrl_ula 0 22 HF8nUWN>7Y3^nf=UQ0D^?3
+l17
+L15
+VZN2a60iQMZMaH2HPW_9gk1
+R8
+31
+R18
+R19
+R20
+R12
+R13
+!s100 APA^7=g@mz=H^47f^TF_Z0
+!i10b 1
+Egen_imm32
+Z21 w1562803456
+R15
+R2
+R3
+R4
+R5
+Z22 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd
+Z23 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd
+l0
+L6
+VLOJAf;X==kFo@Pe;F=8JT0
+R8
+31
+Z24 !s108 1562803106.566000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd|
+Z26 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd|
+R12
+R13
+!s100 S_?`^B]NkG:4mCX[ICfog0
+!i10b 1
+Agen_arch
+R15
+R2
+R3
+R4
+DEx4 work 9 gen_imm32 0 22 LOJAf;X==kFo@Pe;F=8JT0
+l16
+L13
+VOSLkJWcnWW8@20E:L7djR1
+R8
+31
+R24
+R25
+R26
+R12
+R13
+!s100 LEA<9QTHA[]k^CfAc9DAb3
+!i10b 1
+Emem_data
+Z27 w1562803057
+R3
+R4
+R5
+Z28 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd
+Z29 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd
+l0
+L42
+VA^FnN_BbW7BIffMILeRl:2
+R8
+31
+Z30 !s108 1562803105.423000
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd|
+Z32 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd|
+R12
+R13
+!s100 3WL9FC468NHfmm]3UM@cK0
+!i10b 1
+Asyn
+R3
+R4
+DEx4 work 8 mem_data 0 22 A^FnN_BbW7BIffMILeRl:2
+l86
+L54
+VZVNPK]@05TPC>T[RX7G7<0
+R8
+31
+R30
+R31
+R32
+R12
+R13
+!s100 0JXd6L8R<1UQ[W6n:g1Vd3
+!i10b 1
+Emem_inst
+Z33 w1562802919
+R3
+R4
+R5
+Z34 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.vhd
+Z35 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.vhd
+l0
+L42
+VQBZV6GMYQBddX>jKR<5N81
+R8
+31
+Z36 !s108 1562803105.116000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.vhd|
+Z38 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/MEM_INST.vhd|
+R12
+R13
+!s100 R47=6^S:o=Kj`EAJ;_G033
+!i10b 1
+Asyn
+R3
+R4
+DEx4 work 8 mem_inst 0 22 QBZV6GMYQBddX>jKR<5N81
+l86
+L54
+V=OPCOhP@<ZLZ<;h8L_ie_2
+R8
+31
+R36
+R37
+R38
+R12
+R13
+!s100 ;18IF4RBoI:fdez2cdf]B2
+!i10b 1
+Erisc_uni
+Z39 w1562801289
+R15
+R2
+R3
+R4
+R5
+Z40 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd
+Z41 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd
+l0
+L6
+VU79oZBj2Bj?@^393C_G[42
+R8
+31
+Z42 !s108 1562803105.693000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd|
+Z44 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd|
+R12
+R13
+!s100 Y=oV7^L0a[BBFQ7TYC5Q`2
+!i10b 1
+Arisc_arch
+R15
+R2
+R3
+R4
+DEx4 work 8 risc_uni 0 22 U79oZBj2Bj?@^393C_G[42
+l134
+L12
+VaC4hm<6oE`8H1e8mKFXD;1
+R8
+31
+R42
+R43
+R44
+R12
+R13
+!s100 MLMO@?E=0@KPV<XC=WOgO2
+!i10b 1
+Erisc_uni_tb
+Z45 w1562801548
+R15
+R2
+R3
+R4
+R5
+Z46 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd
+Z47 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd
+l0
+L6
+V7RFB=2X36@S;H]@`?6TBB1
+!s100 F9;Oc[b?b?U0YR=1Vm>Tz2
+R8
+31
+!i10b 1
+Z48 !s108 1562803107.115000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd|
+Z50 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd|
+R12
+R13
+Arisc_uni_tb_arch
+R15
+R2
+R3
+R4
+DEx4 work 11 risc_uni_tb 0 22 7RFB=2X36@S;H]@`?6TBB1
+l27
+L10
+Vn;NgObman_;RVD5[naM>^1
+!s100 ;V]Y6@=Z<R>Xog^I[;;O43
+R8
+31
+!i10b 1
+R48
+R49
+R50
+R12
+R13
+Prv_pkg
+w1562703272
+R5
+8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RV_PKG.vhd
+FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RV_PKG.vhd
+l0
+L1
+VWUhF>0V5]kIm^YY69m=XL0
+R8
+31
+R12
+R13
+!s100 2A7Zim1Tee_8nE[fJ5QL72
+!i10b 1
+!s108 1562803104.150000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RV_PKG.vhd|
+!s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/RV_PKG.vhd|
+Eula_rv
+Z51 w1562335288
+R15
+R2
+R3
+R4
+R5
+Z52 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/ULA_RV.vhd
+Z53 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/ULA_RV.vhd
+l0
+L6
+VaYS9`iW50kB8LmWRU9OkS3
+R8
+31
+Z54 !s108 1562803105.998000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/ULA_RV.vhd|
+Z56 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/ULA_RV.vhd|
+R12
+R13
+!s100 >GJCEMm8;1o7ha>AG8oz[1
+!i10b 1
+Aula_arch
+R15
+R2
+R3
+R4
+DEx4 work 6 ula_rv 0 22 aYS9`iW50kB8LmWRU9OkS3
+l18
+L15
+VXSd0DAZ?fg<ZaU05^m]`L2
+R8
+31
+R54
+R55
+R56
+R12
+R13
+!s100 PcH`EP]n_[:IOJQBjeF=31
+!i10b 1
+Exregs
+R1
+R2
+R3
+R4
+R5
+Z57 8C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/XREGS.vhd
+Z58 FC:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/XREGS.vhd
+l0
+L5
+VX[@BK7fM_aZ[k3ad;lCUn0
+R8
+31
+Z59 !s108 1562803104.368000
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/XREGS.vhd|
+Z61 !s107 C:/Users/felip/Downloads/RISCV_UNI/RISCV_UNI/XREGS.vhd|
+R12
+R13
+!s100 ^iLK163nQ<ozBN4@QS7E00
+!i10b 1
+Aarch_xregs
+R2
+R3
+R4
+DEx4 work 5 xregs 0 22 X[@BK7fM_aZ[k3ad;lCUn0
+l17
+L14
+Vzzb^O?29QzB1;LhXA1J:23
+R8
+31
+R59
+R60
+R61
+R12
+R13
+!s100 XI7KI5CGM^V=SBPIbGiUN3
+!i10b 1
