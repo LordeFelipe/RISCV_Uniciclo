@@ -34,9 +34,9 @@ begin
 	
 	clk : process
 	begin
-		clock <= '1';
-		wait for clock_period/2;
 		clock <= '0';
+		wait for clock_period/2;
+		clock <= '1';
 		wait for clock_period/2;
 	end process;
 	

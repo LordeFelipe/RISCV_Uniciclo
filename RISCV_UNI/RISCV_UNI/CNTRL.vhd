@@ -68,7 +68,7 @@ begin
 				unconditionalSignal <= '0';
 				jalrSignal <= '0';
 				memReadSignal <= '0';
-				mem2RegSignal <= "01";
+				mem2RegSignal <= "00";
 				memWriteSignal <= '0';
 				ulaSrcSignal <= '1';
 				ulaOpSignal <= "11";
