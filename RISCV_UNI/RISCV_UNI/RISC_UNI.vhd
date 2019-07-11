@@ -137,7 +137,7 @@ architecture RISC_arch of RISC_UNI is
 	opcode <= instr(6 downto 0);
 	RISCV_process : process(clock)
 	begin
-		if (rising_edge(clock)) then
+		if (falling_edge(clock)) then
 			PC <= pcNew;
 		end if;
 	end process;
@@ -239,7 +239,7 @@ architecture RISC_arch of RISC_UNI is
 							 ulaOut when others;
 	--Branch
 	pcMais4 <= std_logic_vector(signed(pc) + 4);
-	pcBranch <= std_logic_vector(signed(pc) + signed(shift_left(imm32,1)));
+	pcBranch <= std_logic_vector(signed(pc) + signed(imm32));
 	pcJalr <= std_logic_vector((signed(pc) + signed(ulaOut)) and X"FFFFFFFE"); --mascara bit menos significativo 
 	branchCond <= ('0' or jalr) & (branch and (ulaOut(0) or unconditional));
 	

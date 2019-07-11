@@ -1,5 +1,5 @@
 Flow report for RISC_UNI
-Wed Jul 10 23:38:43 2019
+Thu Jul 11 03:28:09 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Jul 10 23:38:43 2019      ;
+; Flow Status                        ; Successful - Thu Jul 11 03:28:09 2019      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; RISC_UNI                                   ;
 ; Top-level Entity Name              ; RISC_UNI                                   ;
 ; Family                             ; Cyclone II                                 ;
 ; Device                             ; EP2C70F896C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,842 / 68,416 ( 4 % )                     ;
-;     Total combinational functions  ; 2,484 / 68,416 ( 4 % )                     ;
-;     Dedicated logic registers      ; 1,087 / 68,416 ( 2 % )                     ;
-; Total registers                    ; 1087                                       ;
-; Total pins                         ; 65 / 622 ( 10 % )                          ;
+; Total logic elements               ; 3,361                                      ;
+;     Total combinational functions  ; 2,401                                      ;
+;     Dedicated logic registers      ; 1,024                                      ;
+; Total registers                    ; 1024                                       ;
+; Total pins                         ; 65                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 16,384 / 1,152,000 ( 1 % )                 ;
-; Embedded Multiplier 9-bit elements ; 0 / 300 ( 0 % )                            ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
+; Total memory bits                  ; 16,384                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/10/2019 23:37:40 ;
+; Start date & time ; 07/11/2019 03:27:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RISC_UNI            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +----------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                        ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +----------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                  ; 110073160271321.156281265907980       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                  ; 145667775010974.156282647804980       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME               ; i1                                    ; --            ; --          ; RISC_UNI_tb    ;
 ; EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ; simulation/modelsim/script.do         ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH   ; RISC_UNI_tb                           ; --            ; --          ; eda_simulation ;
@@ -103,41 +103,29 @@ applicable agreement for further details.
 +----------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4689 MB             ; 00:00:07                           ;
-; Fitter                    ; 00:00:34     ; 1.0                     ; 5024 MB             ; 00:00:33                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4585 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4611 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4566 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:53     ; --                      ; --                  ; 00:00:47                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4680 MB             ; 00:00:10                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:10                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; LAPTOP-L0HNK5PR  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; LAPTOP-L0HNK5PR  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; LAPTOP-L0HNK5PR  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; LAPTOP-L0HNK5PR  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; LAPTOP-L0HNK5PR  ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-LTL9JRD  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off RISC_UNI -c RISC_UNI
-quartus_fit --read_settings_files=off --write_settings_files=off RISC_UNI -c RISC_UNI
-quartus_asm --read_settings_files=off --write_settings_files=off RISC_UNI -c RISC_UNI
-quartus_sta RISC_UNI -c RISC_UNI
-quartus_eda --read_settings_files=off --write_settings_files=off RISC_UNI -c RISC_UNI
 
 
 

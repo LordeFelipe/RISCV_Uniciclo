@@ -2,23 +2,23 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\Danilo\Documents\OAC Projects\RISCV_Uniciclo\RISCV_UNI\RISCV_UNI\simulation\modelsim
+Z0 dC:\Users\felip\Downloads\RISCV_Uniciclo\RISCV_UNI\RISCV_UNI\simulation\modelsim
 Ecntrl
-Z1 w1562806191
+Z1 w1562814052
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dC:\Users\Danilo\Documents\OAC Projects\RISCV_Uniciclo\RISCV_UNI\RISCV_UNI\simulation\modelsim
-Z6 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd
-Z7 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd
+Z5 dC:\Users\felip\Downloads\RISCV_Uniciclo\RISCV_UNI\RISCV_UNI\simulation\modelsim
+Z6 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd
+Z7 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd
 l0
 L5
 VIdHnO0TUoCTKDIL[M:]=C2
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1562812302.154000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd|
-Z11 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd|
+Z9 !s108 1562826499.671000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd|
+Z11 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
 !s100 ;JFE5fINJ9;=;g31SWgK]3
@@ -41,22 +41,22 @@ R13
 !s100 hZZBiFBfl7CM1YM9o5AJ91
 !i10b 1
 Ecntrl_ula
-Z14 w1562803880
+Z14 w1562803610
 Z15 DPx4 work 6 rv_pkg 0 22 WUhF>0V5]kIm^YY69m=XL0
 R2
 R3
 R4
 R5
-Z16 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd
-Z17 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd
+Z16 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd
+Z17 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd
 l0
 L6
 VHF8nUWN>7Y3^nf=UQ0D^?3
 R8
 31
-Z18 !s108 1562812304.440000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd|
-Z20 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd|
+Z18 !s108 1562826501.150000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd|
+Z20 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd|
 R12
 R13
 !s100 gTg7@[hcP9C5H8Wl^k4BE1
@@ -80,22 +80,22 @@ R13
 !s100 APA^7=g@mz=H^47f^TF_Z0
 !i10b 1
 Egen_imm32
-R14
+Z21 w1562803456
 R15
 R2
 R3
 R4
 R5
-Z21 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd
-Z22 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd
+Z22 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd
+Z23 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd
 l0
 L6
 VLOJAf;X==kFo@Pe;F=8JT0
 R8
 31
-Z23 !s108 1562812304.057000
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd|
-Z25 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd|
+Z24 !s108 1562826500.915000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd|
+Z26 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd|
 R12
 R13
 !s100 S_?`^B]NkG:4mCX[ICfog0
@@ -111,28 +111,28 @@ L13
 VOSLkJWcnWW8@20E:L7djR1
 R8
 31
-R23
 R24
 R25
+R26
 R12
 R13
 !s100 LEA<9QTHA[]k^CfAc9DAb3
 !i10b 1
 Emem_data
-R14
+Z27 w1562803057
 R3
 R4
 R5
-Z26 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd
-Z27 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd
+Z28 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd
+Z29 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd
 l0
 L42
 VA^FnN_BbW7BIffMILeRl:2
 R8
 31
-Z28 !s108 1562812303.010000
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd|
-Z30 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd|
+Z30 !s108 1562826500.202000
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd|
+Z32 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd|
 R12
 R13
 !s100 3WL9FC468NHfmm]3UM@cK0
@@ -146,28 +146,28 @@ L54
 VZVNPK]@05TPC>T[RX7G7<0
 R8
 31
-R28
-R29
 R30
+R31
+R32
 R12
 R13
 !s100 0JXd6L8R<1UQ[W6n:g1Vd3
 !i10b 1
 Emem_inst
-R14
+Z33 w1562802919
 R3
 R4
 R5
-Z31 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd
-Z32 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd
+Z34 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd
+Z35 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd
 l0
 L42
 VQBZV6GMYQBddX>jKR<5N81
 R8
 31
-Z33 !s108 1562812302.602000
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd|
-Z35 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd|
+Z36 !s108 1562826499.950000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd|
+Z38 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd|
 R12
 R13
 !s100 R47=6^S:o=Kj`EAJ;_G033
@@ -181,30 +181,30 @@ L54
 V=OPCOhP@<ZLZ<;h8L_ie_2
 R8
 31
-R33
-R34
-R35
+R36
+R37
+R38
 R12
 R13
 !s100 ;18IF4RBoI:fdez2cdf]B2
 !i10b 1
 Erisc_uni
-Z36 w1562807219
+Z39 w1562826475
 R15
 R2
 R3
 R4
 R5
-Z37 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd
-Z38 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd
+Z40 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd
+Z41 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd
 l0
 L6
 VU79oZBj2Bj?@^393C_G[42
 R8
 31
-Z39 !s108 1562812303.394000
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd|
-Z41 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd|
+Z42 !s108 1562826500.434000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd|
+Z44 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd|
 R12
 R13
 !s100 Y=oV7^L0a[BBFQ7TYC5Q`2
@@ -217,25 +217,25 @@ R4
 DEx4 work 8 risc_uni 0 22 U79oZBj2Bj?@^393C_G[42
 l134
 L12
-V=KNQ^T:9T;f:0IZ8;kJUf2
+V:@Z51HWl[;4JFAKA=cG[R1
 R8
 31
-R39
-R40
-R41
+R42
+R43
+R44
 R12
 R13
-!s100 SUHjD:lhHM9VOmk2RnfC33
+!s100 :V9Mh7^Ya6NSnOSdIm9M_1
 !i10b 1
 Erisc_uni_tb
-Z42 w1562805457
+Z45 w1562820035
 R15
 R2
 R3
 R4
 R5
-Z43 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd
-Z44 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd
+Z46 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd
+Z47 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd
 l0
 L6
 V7RFB=2X36@S;H]@`?6TBB1
@@ -243,9 +243,9 @@ V7RFB=2X36@S;H]@`?6TBB1
 R8
 31
 !i10b 1
-Z45 !s108 1562812304.763000
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd|
-Z47 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd|
+Z48 !s108 1562826501.365000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd|
+Z50 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd|
 R12
 R13
 Arisc_uni_tb_arch
@@ -256,21 +256,21 @@ R4
 DEx4 work 11 risc_uni_tb 0 22 7RFB=2X36@S;H]@`?6TBB1
 l27
 L10
-V5<7Mhk8f5NoQ9amDQ^4Da0
-!s100 ?DKkz3E6S8Dg4O3CZBPZh0
+VS74OQ9knP`Qc<e[aeCOAo2
+!s100 <iLQVVe6`?XzWh>EOU:593
 R8
 31
 !i10b 1
-R45
-R46
-R47
+R48
+R49
+R50
 R12
 R13
 Prv_pkg
-R14
+w1562703272
 R5
-8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd
-FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd
+8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd
+FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd
 l0
 L1
 VWUhF>0V5]kIm^YY69m=XL0
@@ -280,26 +280,26 @@ R12
 R13
 !s100 2A7Zim1Tee_8nE[fJ5QL72
 !i10b 1
-!s108 1562812301.466000
-!s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd|
-!s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd|
+!s108 1562826499.219000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd|
+!s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd|
 Eula_rv
-R14
+Z51 w1562335288
 R15
 R2
 R3
 R4
 R5
-Z48 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd
-Z49 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd
+Z52 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd
+Z53 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd
 l0
 L6
 VaYS9`iW50kB8LmWRU9OkS3
 R8
 31
-Z50 !s108 1562812303.732000
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd|
-Z52 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd|
+Z54 !s108 1562826500.650000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd|
+Z56 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd|
 R12
 R13
 !s100 >GJCEMm8;1o7ha>AG8oz[1
@@ -315,29 +315,29 @@ L15
 VXSd0DAZ?fg<ZaU05^m]`L2
 R8
 31
-R50
-R51
-R52
+R54
+R55
+R56
 R12
 R13
 !s100 PcH`EP]n_[:IOJQBjeF=31
 !i10b 1
 Exregs
-R14
+Z57 w1562826431
 R2
 R3
 R4
 R5
-Z53 8C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd
-Z54 FC:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd
+Z58 8C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd
+Z59 FC:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd
 l0
 L5
 VX[@BK7fM_aZ[k3ad;lCUn0
 R8
 31
-Z55 !s108 1562812301.740000
-Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd|
-Z57 !s107 C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd|
+Z60 !s108 1562826499.387000
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd|
+Z62 !s107 C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd|
 R12
 R13
 !s100 ^iLK163nQ<ozBN4@QS7E00
@@ -347,15 +347,15 @@ R2
 R3
 R4
 DEx4 work 5 xregs 0 22 X[@BK7fM_aZ[k3ad;lCUn0
-l17
+l22
 L14
-Vzzb^O?29QzB1;LhXA1J:23
+VW?4XHMFzF92ljVL1l=cXm0
 R8
 31
-R55
-R56
-R57
+R60
+R61
+R62
 R12
 R13
-!s100 XI7KI5CGM^V=SBPIbGiUN3
+!s100 ;LI9SaXUPF6NgbVMoP?z32
 !i10b 1

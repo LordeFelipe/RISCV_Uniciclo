@@ -12,19 +12,21 @@ entity XREGS is
 end XREGS;
 
 architecture arch_XREGS of XREGS is
-	type XREGS_type is array(0 to 32) of std_logic_vector(31 downto 0);
-	signal XREGS : XREGS_type;
+	type XREGS_type is array(0 to 31) of std_logic_vector(31 downto 0);
+	signal XREGS : XREGS_type := (X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",
+											X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",
+											X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",
+											X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",
+											X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",
+											X"00000000",X"00000000");
 begin
 	process(clk, wren, rst, rs1, rs2, rd, data)
 	begin
+		ro1 <= XREGS(to_integer(unsigned(rs1)));
+		ro2 <= XREGS(to_integer(unsigned(rs2)));
 		if rising_edge(clk) then
 			if wren = '1' then 
 				XREGS(to_integer(unsigned(rd))) <= data;
-				ro1 <= data;
-				ro2 <= data;
-			elsif wren = '0' then
-				ro1 <= XREGS(to_integer(unsigned(rs1)));
-				ro2 <= XREGS(to_integer(unsigned(rs2)));
 			end if;
 			if rst = '1' then
 				for I in 0 to 31 loop

@@ -1,4 +1,5 @@
 # Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
 # do RISC_UNI_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -10,11 +11,11 @@
 # ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RV_PKG.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Compiling package RV_PKG
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/XREGS.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,7 +23,7 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity XREGS
 # -- Compiling architecture arch_XREGS of XREGS
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -30,21 +31,21 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity CNTRL
 # -- Compiling architecture CNTRL_arch of CNTRL
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_INST.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MEM_INST
 # -- Compiling architecture SYN of mem_inst
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/MEM_DATA.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MEM_DATA
 # -- Compiling architecture SYN of mem_data
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -53,7 +54,7 @@
 # -- Loading package RV_PKG
 # -- Compiling entity RISC_UNI
 # -- Compiling architecture RISC_arch of RISC_UNI
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/ULA_RV.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -62,7 +63,7 @@
 # -- Loading package RV_PKG
 # -- Compiling entity ULA_RV
 # -- Compiling architecture ULA_ARCH of ULA_RV
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/GEN_IMM32.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -71,7 +72,7 @@
 # -- Loading package RV_PKG
 # -- Compiling entity GEN_IMM32
 # -- Compiling architecture GEN_arch of GEN_IMM32
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/CNTRL_ULA.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -81,7 +82,7 @@
 # -- Compiling entity CNTRL_ULA
 # -- Compiling architecture CNTRL_ULA_arch of CNTRL_ULA
 # 
-# vcom -93 -work work {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd}
+# vcom -93 -work work {C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/RISC_UNI_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -113,72 +114,103 @@
 # Loading work.cntrl_ula(cntrl_ula_arch)
 # Loading work.mem_data(syn)
 # 
-# do C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do
-# ** Error: Cannot open macro file: C:/Users/Danilo/Documents/OAC
-# Error in macro ./RISC_UNI_run_msim_rtl_vhdl.do line 22
-# Cannot open macro file: C:/Users/Danilo/Documents/OAC
-#     while executing
-# "do C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do"
-do {C:/Users/Danilo/Documents/OAC Projects/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do}
+# do C:/Users/felip/Downloads/RISCV_Uniciclo/RISCV_UNI/RISCV_UNI/simulation/modelsim/script.do
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/clock
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: felipe  Hostname: DESKTOP-LTL9JRD  ProcessID: 15532
+# 
+#           Attempting to use alternate WLF file "./wlftva0gb4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftva0gb4
+# 
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/PC2
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/instr2
+# add wave -noupdate /risc_uni_tb/i1/contr/branch
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/pcNew
+# add wave -noupdate /risc_uni_tb/i1/branchCond
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/clk
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/wren
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/rst
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/rs1
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/rs2
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/rd
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/data
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/ro1
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/breg/ro2
+# add wave -noupdate -radix hexadecimal -childformat {{/risc_uni_tb/i1/breg/XREGS(0) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(1) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(2) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(3) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(4) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(5) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(6) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(7) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(8) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(9) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(10) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(11) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(12) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(13) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(14) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(15) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(16) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(17) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(18) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(19) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(20) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(21) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(22) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(23) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(24) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(25) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(26) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(27) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(28) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(29) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(30) -radix hexadecimal} {/risc_uni_tb/i1/breg/XREGS(31) -radix hexadecimal}} -subitemconfig {/risc_uni_tb/i1/breg/XREGS(0) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(1) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(2) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(3) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(4) 
+# {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(5) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(6) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(7) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(8) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(9) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(10) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(11) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(12) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(13) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(14) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(15) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(16) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(17) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(18) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(19) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(20) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(21) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(22) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(23) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(24) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(25) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(26) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(27) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(28) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(29) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(30) {-height 15 -radix hexadecimal} /risc_uni_tb/i1/breg/XREGS(31) {-height 15 -radix hexadecimal}} /risc_uni_tb/i1/breg/XREGS
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/ula/OPCODE
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/ula/A
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/ula/B
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/ula/Z
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/ula/ZERO
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/ula/A32
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/gerador_imm/instr
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/gerador_imm/imm32
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/gerador_imm/opcode
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_i/address
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_i/clock
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_i/data
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_i/wren
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_i/q
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_i/sub_wire0
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_d/address
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_d/clock
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_d/data
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_d/wren
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_d/q
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/mem_d/sub_wire0
+# add wave -noupdate /risc_uni_tb/i1/contr/opcode
+# add wave -noupdate /risc_uni_tb/i1/contr/unconditional
+# add wave -noupdate /risc_uni_tb/i1/contr/jalr
+# add wave -noupdate /risc_uni_tb/i1/contr/memRead
+# add wave -noupdate /risc_uni_tb/i1/contr/mem2Reg
+# add wave -noupdate /risc_uni_tb/i1/contr/memWrite
+# add wave -noupdate /risc_uni_tb/i1/contr/ulaSrc
+# add wave -noupdate /risc_uni_tb/i1/contr/ulaOp
+# add wave -noupdate /risc_uni_tb/i1/contr/regWrite
+# add wave -noupdate -radix hexadecimal /risc_uni_tb/i1/pcBranch
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {125134 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 243
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {233791 ps}
+# run 400 ns
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /risc_uni_tb/i1/ula
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /risc_uni_tb/i1/breg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /risc_uni_tb/i1/breg
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 1  Instance: /risc_uni_tb/i1/ula
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 20 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 20 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 20 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 40 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 60 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 60 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 60 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 60 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 60 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 60 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /risc_uni_tb/i1/breg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /risc_uni_tb/i1/breg
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 60 ns  Iteration: 3  Instance: /risc_uni_tb/i1/ula
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 80 ns  Iteration: 2  Instance: /risc_uni_tb/i1/mem_d/altsyncram_component
+#    Time: 0 ps  Iteration: 2  Instance: /risc_uni_tb/i1/ula
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -4 is not in bounds of NATURAL.
+#    Time: 180 ns  Iteration: 9  Instance: /risc_uni_tb/i1/ula
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -4 is not in bounds of NATURAL.
+#    Time: 260 ns  Iteration: 9  Instance: /risc_uni_tb/i1/ula
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -4 is not in bounds of NATURAL.
+#    Time: 340 ns  Iteration: 9  Instance: /risc_uni_tb/i1/ula

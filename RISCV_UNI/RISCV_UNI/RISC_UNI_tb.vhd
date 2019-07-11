@@ -9,7 +9,7 @@ end RISC_UNI_tb;
 
 architecture RISC_UNI_tb_arch of RISC_UNI_tb is
 	--signals
-	signal clock : std_logic := '1';
+	signal clock : std_logic := '0';
 	signal PC2 : std_logic_vector(31 downto 0);
 	signal instr2 : std_logic_vector(31 downto 0);
 	constant clock_period: time := 40 ns;
